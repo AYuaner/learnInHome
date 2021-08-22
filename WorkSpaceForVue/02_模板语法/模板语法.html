@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8"/>
+        <title>模板语法</title>
+        <!-- 引入Vue -->
+        <script type="text/javascript" src="../JS/vue.js"></script>
+    </head>
+
+    <body>
+        <!-- 准备好一个容器 -->
+        <div id="root">
+            <h1>插值语法</h1>
+            <h3>你好，{{name}}</h3>
+            <hr/>
+            <h1>指令语法</h1>
+            <!-- 'v-bind:'可以简写为':' -->
+            <a v-bind:href="atguigu.url">点我去{{atguigu.name}}学习</a>
+            <a :href="baidu.url">点我去{{baidu.name}}学习</a>
+        </div>
+    </body>
+
+    <script type="text/javascript">
+        Vue.config.productionTip=false
+
+        new Vue({
+            el:'#root',
+            data:{
+                name:'jack',
+                atguigu:{
+                    name:'尚硅谷',
+                    url:'http://www.atguigu.com',
+                },
+                baidu:{
+                    name:'百度',
+                    url:'http://www.baidu.com',
+                }
+            }
+        })
+    </script>
+
+</html>

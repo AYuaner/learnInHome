@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>模板语法</title>
+    <!-- 引入Vue -->
+    <script type="text/javascript" src="../JS/vue.js"></script>
+</head>
+
+<body>
+    <!-- 准备好一个容器 -->
+    <div id="root">
+        单向数据绑定：<input type="text" v-bind:value="name">
+        <br />
+        <!-- 双向绑定一般用在表单元素上，'v-model:value'可以简写为'v-model' -->
+        双向数据绑定：<input type="text" v-model:value="url">
+    </div>
+</body>
+
+<script type="text/javascript">
+    Vue.config.productionTip = false
+
+    new Vue({
+        el: '#root',
+        data: {
+            name: 'atigugu',
+            url: 'http://www.atguigu.com'
+        }
+    })
+</script>
+
+</html>
